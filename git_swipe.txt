@@ -1,0 +1,17 @@
+//Создание репозитория
+
+git init
+
+//Создание readme
+
+echo >> README.md
+
+//Создание локального пользователя
+
+git config --local user.name "Имя пользователя"
+
+git config --local user>email имя@почта.ру
+
+//Добавление файлов в git
+
+git add -A
