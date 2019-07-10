@@ -110,4 +110,39 @@ document.addEventListener('DOMContentLoaded', function() {
         document.body.style.overflow = '';
     });
 
+
+    class Options {
+        constructor(height, width, bg, fontSize, textAlign) {
+            this.height = height;
+            this.width = width;
+            this.bg = bg;
+            this.fontSize = fontSize;
+            this.textAlign = textAlign;
+        }
+
+        newDiv() {
+            let div = document.createElement('div');
+            div.innerText = 'Создали блок';
+            div.style.height = this.height;
+            div.style.width = this.width;
+            div.style.backgroundColor = this.bg;
+            div.style.fontSize = this.fontSize;
+            div.style.textAlign = this.textAlign;
+
+            let bodyBlock = document.querySelector('body');
+            bodyBlock.appendChild(div);
+        }
+    }
+
+    let newDiv = new Options('300px', '300px', 'blue', '28px', 'center');
+
+    let newDiv2 = new Options('400px', '100%', 'yellow', '32px', 'right');
+
+    newDiv2.newDiv();
+
+    newDiv.newDiv();
+
+    
+
+
 });
